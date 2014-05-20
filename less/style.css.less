@@ -1,0 +1,92 @@
+/*!
+ *  snippets
+ *  - docs: https://github.com/tiko2015/snippets
+ *  - Licencia: The MIT License (MIT)
+*------------------------------------------------------------- */
+
+/* vars */
+
+@backgroundColor: #fff;
+
+@textColor: #adadad;
+@titleColor: #7e7e7e;
+@lineColor: #ebebeb;
+
+@titleFont: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+@linkColor:     #494d50;
+@linkColorOver: #2594ef;
+
+@kuler1: #005dab; // top fondo
+@kuler2: #004f91; // top borde superior
+@kuler3: #004178; // top borde inferior
+@kuler4: #a3bad8; // top menu texto
+@kuler5: #004987; // top fondo menu de usuario top
+@kuler6: #00ab4e; // top fondo menu de usuario alerta
+@kuler7: #2594ef; // borde inferior activo sub panel
+@kuler8: #f8f8f8; // top panel fondo
+@kuler9: #e5f3ff; // top panel fondo over
+@kuler10: #1b6eb2; // top fondo buscar
+@kuler11: #8cb0e4; // top texto buscar
+@kuler12: #cfe9ff; // top texto menu usuario
+@kuler13: #002749; // top menu usuario icono sombra 
+@kuler14: #fc6b00; // top menu usuario tooltip mensajes
+
+@errorColor:    #fd4149;  
+@warningColor:  #c09854;
+@noticeColor:   #3986ac;
+@successColor:  #458746;
+
+@media: 'media';
+
+@layout1160: ~"screen and (max-width: 1160px)";
+@layout1100: ~"screen and (max-width: 1100px)";
+@layout1050: ~"screen and (max-width: 1050px)";
+
+@import "03layouts/integracion.less";
+@import "02extends/css3.less";
+@import "02extends/taringa-icons.less";
+@import "03layouts/branday.less";
+
+/* imports */
+.v6 {
+	@import "01core/mixins.less";
+	@import "01core/normalize.less";
+	@import "01core/typography.less";
+
+	//@import "02extends/css3.less";
+	@import "02extends/buttons.less";
+	//@import "02extends/font-awesome.less";
+	//@import "02extends/taringa-icons.less";
+
+	@import "03layouts/layout.less";
+	@import "03layouts/top.less";
+	@import "03layouts/footer.less";
+	@import "03layouts/footer-pages.less";
+	@import "03layouts/top_beta.less";
+	//@import "03layouts/dev-mode.less";
+
+	@import "04elements/forms.less";
+	@import "04elements/actions.less";
+	@import "04elements/lists.less";
+	@import "04elements/panels.less";
+	@import "04elements/sidebar.less";
+	@import "04elements/tools.less";
+
+	@import "05widgets/list-top-posts.less";
+	@import "05widgets/anuncios.less";
+	@import "05widgets/estadisticas.less";
+	@import "05widgets/shouts.less";
+	@import "05widgets/taringa-musica.less";
+	@import "05widgets/top-usuarios.less";
+
+	@import "06navigation/header-nav.less";
+	@import "06navigation/header-nav-user.less";
+	@import "06navigation/shout.less";
+	@import "06navigation/container-nav.less";
+	@import "06navigation/footer-nav.less";
+	@import "06navigation/tabs.less";
+
+	@import "07pages/home.less";
+}
+

@@ -1,0 +1,49 @@
+header { 
+  //position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 58px;
+  display: block;
+  background: @kuler1;
+  border-top: 1px solid @kuler2;
+  border-bottom: 2px solid @kuler3;
+  z-index: 100;
+  min-width: 1000px;
+  //.box-shadow(0 1px 0 @lineColor);
+  .transition(all 300ms ease);
+  &.scroll {
+    //.box-shadow(0 1px 5px rgba(0,0,0,0.5));
+  }
+  .v6-wrapper {
+    max-width: 1260px;
+    min-width: 1000px;
+    margin: 0 auto;
+  }
+  h1 {
+    float: left;
+    font-size: 12px;
+    margin: 0;
+    a {
+      background: data-uri('public/@{media}/img/logo-taringa.png');
+      //background: url('@{media}/img/logo-taringa.png');
+      .size(163,59);
+      .hide-text();
+      display: block;
+    }
+  }
+}
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 192dpi) {
+  header h1 a {
+    background-image: data-uri('public/@{media}/img/logo-taringax2.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,133 @@
+.panels {
+  background: #fff;
+  width: 680px;
+  border-radius: 3px;
+  border:1px solid @lineColor;
+  .box-shadow(5px 5px 10px rgba(0,0,0,0.1));
+
+  .subnav {
+    float: right;
+    margin: 0;
+    list-style: none;
+    width: 128px;
+    li{
+      border-bottom: 1px solid @lineColor;
+
+      a {
+          display: block;
+          line-height: 36px;
+          border-bottom: 2px solid #fff;
+          font-size: 12px;
+          text-indent: 10px;
+          padding-top: 2px;
+          &:hover,
+          &.active {
+            color: @kuler1; 
+            border-bottom-color: @kuler7; 
+          }
+        }
+      }
+  }
+
+  .panel {
+    overflow: hidden;
+    height: 0;
+    //width: 552px;
+    .opacity(0);
+    &.active { 
+      height: 280px;
+      .opacity(1);
+      .transition(opacity 300ms ease);
+    }
+
+    ol {
+      margin: 0;
+      list-style: none;
+      height: 100%;
+      li {
+        float: left;
+        height: 100%;
+        width: (680 - 128) / 3px;
+        border-right: 1px solid @lineColor;
+        .border-box();
+        h4 {
+          margin: 0;
+          line-height: 40px;
+          font-size: 14px;
+          display: block;
+          text-indent: 10px;
+          border-bottom: 1px solid @lineColor;
+        }
+        img {
+          margin: 10px;
+          .size(163,122);
+        }
+        p {
+          margin:0 10px;
+          font-size: 13px;
+          line-height: 16px;
+          height: 71px;
+          a { color: @kuler1; 
+            &:hover { color: @kuler7; }
+          }
+        }
+        .mas {
+          display: block;
+          background: @kuler8;
+          color: @kuler1;
+          text-align: center;
+          line-height: 18px;
+          font-size: 10px;
+          font-family: Verdana, sans-serif;
+          border-top: 1px solid @lineColor;
+          clear: left;
+          &:hover {
+            background: @kuler9;
+          }
+        }
+      }
+      &.col-2 li {
+        width: (680 - 128) / 2px;
+        h4 {
+          margin:0 0 10px 0;
+        }
+        p {
+          clear: left;
+          height: 30px;
+          padding: 6px 10px 17px; 
+          margin: 0;
+          .count {
+            float: left;  
+            font-size: 18px;
+            color: #b0b0b0;
+            .size(40,28);
+            padding-top: 3px;
+            line-height: 18px;
+            small {
+              display: block;
+              font-size: 10px;
+              line-height: 10px;
+            }
+          }
+          .users {
+            color: #b0b0b0;
+            float: left;
+            width: 50px;
+            margin-right: 10px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.panels #panel-usuarios .col-2 {
+  li {
+    p {
+      padding: 0 0 10px;
+      line-height: 20px;
+      height: 20px;
+    }
+  }
+}

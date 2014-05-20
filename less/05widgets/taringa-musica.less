@@ -1,0 +1,96 @@
+.taringa-musica {
+  h2 {
+    .mixIconBlt(@ico-musica);
+    padding-left: 4px;
+  }
+  a.mas {
+    float: right;
+    font-size: 12px;
+    color: #FFF;
+    background: #2594ef;
+    padding: 0 10px;
+    margin-top: -5px;
+    font-weight: normal;
+    .border-radius(3px);
+    .box-shadow(1px 1px 1px #d8d8d8);
+    &:hover {
+      background: #46acff;
+      .box-shadow(1px 1px 1px #cbcbcb);
+    }
+  }
+  ul {
+    li {
+      margin-bottom: 20px;
+      height: 60px;
+      line-height: 1.1em;
+      img {
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-right: 10px;
+      }
+      h3, h4 {
+        color: #737373;
+        font-size: 14px;
+        margin: 0;
+        height: 16px;
+        line-height: 16px;
+        margin-bottom: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        white-space: nowrap;
+        a {
+          color: #737373;
+          font-weight: bold;
+          &:hover {
+            color: #ee14b8;
+          }
+        }
+      }
+      a.play {
+        color: #ee14b8;
+        background: #fff;
+        .border-radius(15px);
+        padding:6px 10px 4px 30px;
+        font-size: 12px;
+        border: solid 1px #c5c5c5;
+        position: relative;
+        margin-left: -5px;
+        font-weight: normal;
+        top:10px\9;
+        span {
+          width: 24px;
+          height: 24px;
+          border: solid 1px #c5c5c5;
+          display: block;
+          position: absolute;
+          left: -1px;
+          top:-1px;
+          .border-radius(15px);
+          .gradient(#efefef, #efefef, #d6d6d6);
+          &:before {
+            display: inline-block;
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            width: 0;
+            height: 0;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 5px solid #ef14b9;
+            .gradient(red 0 100%);
+          }
+        }
+        &:hover {
+          border-color:#ff9fe7;
+          span {
+            border-color:#ff9fe7;
+            background: #f1f1f1;
+          }
+        }
+      }
+    }
+  }
+}

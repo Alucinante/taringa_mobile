@@ -1,0 +1,40 @@
+html.v6-brand body {
+  background:#08223b url('@{media}/upload/branday-bg.jpg') center 60px no-repeat;
+  #branday {
+    position: relative;
+    .v6-banner-flash {
+      height: auto;
+    }
+    .v6-banner-top {
+      height: 241px;
+      background: url('@{media}/upload/branday-top-1260-exp.jpg') no-repeat;
+      @media @layout1160 {
+        height: 200px;
+        background: url('@{media}/upload/branday-top-1024-exp.jpg') no-repeat;
+        }
+      &.alto {
+        background: url('@{media}/upload/branday-top-1260.jpg') no-repeat;
+      }
+    }
+    .btn {
+      background:#004179;
+      color: #b3c6d7;
+      position: absolute;
+      right: 12px;
+      top: 0;
+      font-size: 12px;
+      .border-radius(0 0 2px 2px);
+      .mixIconBlt(@ico-cerrar);
+      padding: 0 10px;
+      .abrir {
+        display: none;
+      }
+      &.cerrar .abrir {
+        display: inline;
+      }
+      &.cerrar .cerrar {
+        display: none;
+      }
+    }
+  } 
+}

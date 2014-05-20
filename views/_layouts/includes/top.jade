@@ -1,0 +1,273 @@
+header
+  .v6-wrapper
+    h1: a(href="./", title=description)= title
+    nav.nav-principal
+      ul
+        li.active
+          a(href="#") Posts
+        li
+          a(href="#") Mi T!
+            span.badge 43
+        li
+          a(href="#comunidades") Comunidades
+        li
+          a(href="#musica") T! Música
+        li
+          a(href="#juegos") Juegos
+        li.tops
+          a(href="#tops") Tops
+          .panels
+            ul.subnav
+              li: a(href="#panel-posts").active Posts
+              li: a(href="#panel-comunidad") Comunidades
+              li: a(href="#panel-temas") Temas
+              li: a(href="#panel-usuarios") Usuarios
+            #panel-posts.panel.active
+              ol.col-3
+                li
+                  h4 Más puntos
+                  a(href="#"): img(src="media/upload/top-panel.jpg")
+                  p: a(href="#") "Taringa! no es un sitio de descargas"
+                  a(href="#mas").mas Más
+                li
+                  h4 Más favs
+                  a(href="#"): img(src="media/upload/top-panel.jpg")
+                  p: a(href="#") "Taringa! no es un sitio de descargas"
+                  a(href="#mas").mas Más
+                li
+                  h4 Más comentarios
+                  a(href="#"): img(src="media/upload/top-panel.jpg")
+                  p: a(href="#") "Taringa! no es un sitio de descargas"
+                  a(href="#mas").mas Más
+            #panel-comunidad.panel
+              ol.col-3
+                li
+                  h4 Más populares
+                  a(href="#"): img(src="media/upload/top-panel.jpg")
+                  p: a(href="#") "Taringa! no es un sitio de descargas"
+                  a(href="#mas").mas Más
+                li
+                  h4 Con más temas
+                  a(href="#"): img(src="media/upload/top-panel.jpg")
+                  p: a(href="#") "Taringa! no es un sitio de descargas"
+                  a(href="#mas").mas Más
+                li
+                  h4 Más seguidas
+                  a(href="#"): img(src="media/upload/top-panel.jpg")
+                  p: a(href="#") "Taringa! no es un sitio de descargas"
+                  a(href="#mas").mas Más
+            #panel-temas.panel
+              ol.col-2
+                li
+                  h4 Más votados
+                  - each item in [1,2,3,4] 
+                    p
+                      span.count 253
+                        small votos
+                      a(href="#") Cons lorem ectetur lorem ipsum loret im amet loret soq tow fo.
+                  a(href="#mas").mas Más
+                li
+                  h4 Más respuestas
+                  - each item in [1,2,3,4] 
+                    p
+                      span.count 253
+                        small resp
+                      a(href="#") Cons lorem ectetur lorem ipsum loret im amet loret soq tow fo.
+                  a(href="#mas").mas Más
+            #panel-usuarios.panel
+              ol.col-2
+                - each title in ["Más puntos", "Más seguidores"] 
+                  li
+                    h4= title
+                    - each item in [1,2,3,4,5,6,7] 
+                      p 
+                        span.users 23288
+                        a(href="#") Cons lorem efo.
+                    a(href="#mas").mas Más
+    nav.nav-user
+      if content.user
+        if content.user.login
+          .login
+            a(href="#shout").ico-shout
+              span.title crear shout
+            #tool-shout
+              form
+                textarea
+              .step2
+                input(type="text", placeholder="")
+                button(type="submit").add Agregar  
+                
+              .step3
+                .info-site
+                  span.close
+                  h2  Nombre del site
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sollicitudin sapien non purus posuere, in posuere.
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum.
+                  p 
+                    a(href="#") www.urlsitio.com.ar 
+                
+              .botones
+                a(href="#").ico-camera
+                .info-privacy.up-image.hide
+                  ul
+                    li
+                      a(href="#") Subir desde mi computadora
+                    li
+                      a(href="#").importar-url Importar desde una URL
+                a(href="#").ico-video
+                a(href="#").link Link
+                button(type="submit") Compartir
+                .share 
+                  a(href="#").ico-fb
+                    span.title compartir en facebook
+                  a(href="#").ico-tw
+                    span.title compartir en twitter
+                  a(href="#").ico-lock
+                  .info-privacy.hide
+                    ul
+                      li
+                        a(href="#") Todos pueden comentar
+                      li.active
+                        a(href="#") Sólo quien sigo puede comentar
+                      li
+                        a(href="#") Nadie puede comentar
+              .shout-enviado.hide 
+                p El shout fue enviado    
+            .user-actions
+              .user-action
+                a(href="#tool-notificaciones").ico-notificaciones
+                  span.count 99
+                #tool-notificaciones.tools.hide
+                  h4 Notificaciones
+                  ul
+                    - each item in [1,2,3,4]
+                      li
+                        a(href="#")
+                          img(src="media/upload/top-panel.jpg")
+                          span.noti-icon.ico-favoritos
+                          h5
+                            strong.ico-usuario El_Gammer_DK 
+                            | y otro usuario comentaron en tu post: 
+                            strong.elipsis Un “yes” a la soberanía argentina en Mal Un “yes” a la soberanía argentina en Mal Un “yes” a la soberanía argentina en Mal
+                    li
+                      a(href="#")
+                        img(src="media/upload/top-panel.jpg")
+                        span.noti-icon.ico-comments
+                        h5
+                          strong.ico-usuario Nombre de Usuario 
+                          | comentó en una imagen de 
+                          strong Nombre de usuario 2
+                    li
+                      a(href="#")
+                        img(src="media/upload/top-panel.jpg")
+                        span.noti-icon.ico-favoritos
+                        h5
+                          strong.ico-usuario Fulano 
+                          | agregó tu post: 
+                          strong.elipsis Nombre del post Nombre del post Nombre del post 
+                          | a Favoritos
+                    li
+                      a(href="#")
+                        img(src="media/upload/top-panel.jpg")
+                        span.noti-icon.ico-medalla
+                        p Felicitaciones, haz recibido una nueva medalla por 
+                          strong Lorem Ipsum
+                    li
+                      a(href="#")
+                        img(src="media/upload/top-panel.jpg")
+                        span.noti-icon.ico-tesigue
+                        h5
+                          strong.ico-usuario Nombre de Usuario 
+                          | te está siguiendo
+                    li
+                      a(href="#")
+                        img(src="media/upload/top-panel.jpg")
+                        span.noti-icon.ico-puntos
+                        h5
+                          strong.ico-usuario Nombre de usuario 
+                          | dejó 8 puntos en tu post: 
+                          strong.elipsis Nombre del post Nombre del post Nombre del post
+                    li
+                      a(href="#")
+                        img(src="media/upload/top-panel.jpg")
+                        span.noti-icon.ico-commentsrespond
+                        h5
+                          strong.ico-usuario Nombre de Usuario 
+                          | respondió tu comentario
+                    li
+                      a(href="#")
+                        img(src="media/upload/top-panel.jpg")
+                        span.noti-icon.ico-usuario
+                        h5
+                          strong.ico-usuario Nombre de Usuario 
+                          | te mencionó en un Shout
+                    li
+                      a(href="#")
+                        img(src="media/upload/top-panel.jpg")
+                        span.noti-icon.ico-cambiorango
+                        p Haz cambiado de rango!
+                  a(href="#mas").mas Más
+              .user-action
+                a(href="#tool-mensajes").ico-mensajes
+                  span.count 43
+                #tool-mensajes.tools.hide
+                  .actions
+                    a(href="#") Escribir nuevo
+                  h4 Mensajes
+                  ul
+                    - each item in [1,2,3,4,5,6,7]
+                      li
+                        a(href="#")
+                          img(src="media/upload/top-panel.jpg")
+                          span.noti-icon.ico-point
+                          h5 
+                            strong.ico-usuario Nombre de usuario
+                          p Titulo del mensaje enviado por el usuario
+                  a(href="#mas").mas Más
+              .user-action
+                a(href="#tool-favoritos").ico-favoritos
+                  span.count 25
+                #tool-favoritos.tools.hide
+                  h4 Favoritos
+                  ul
+                    - each item in [1,2,3,4,5,6,7]
+                      li
+                        a(href="#")
+                          img(src="media/upload/top-panel.jpg")
+                          h5 
+                            strong 27 Increíbles vistas que sólo verías si fueras un pájaro
+                          p 1252 puntos | 57 comentarios
+                  a(href="#mas").mas Más
+              .user-action
+                a(href="#")
+                  img(src="media/upload/user.png").user-picture
+                  span.user-name= content.user.nombre
+                #tool-profile.tools.hide
+                  ul
+                    li
+                      a(href="#") Cuenta
+                    li
+                      a(href="#") Borradores
+                    li
+                      a(href="#") Salir    
+        else
+          .fb-login
+            a(href="#").identificarse
+            a(href="login.html").ingresar Ingresar
+          a(href="").registrarte Registrarte
+        form(action="#").buscar
+          p
+            input(type="text", placeholder="Buscar")
+            button(type="submit")
+          .box-results.hide
+            ul
+              li 
+                a(href="#") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              li.active 
+                a(href="#") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              li  
+                a(href="#") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              li 
+                a(href="#") Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              li 
+                a(href="#") Lorem ipsum dolor sit amet, consectetur adipiscing elit.

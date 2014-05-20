@@ -1,0 +1,41 @@
+section.content-left
+  .list-destacados.list-l
+    ul
+      - each item in content.items
+        li
+          a(href="http://www.google.com").avatar
+            img(src="media/upload/avatar1.jpg", alt="Avatar")    
+          h3
+            a(href="http://www.google.com")= item.titulo
+          div.meta
+            a(href="http://www.yahoo.com").usuario(title="ELManolo12")
+              span ELManolo12
+            span.tiempo.timeago(title="20 minutos") 20 minutos
+            a(href="http://www.facebook.com").ubicacion(title="Apuntes y...")
+              span Apuntes y...
+            a(href="http://www.pagina12.com").comentarios
+              span(title="120 Comentarios") 120
+            //-span.tiempo.timeago(title=item.timeago)
+          div.social-media
+            a(href="#").fb
+            a(href="#").tw
+            a(href="#").tg
+      li.patrocinado
+        a(href="#").avatar
+          img(src="media/upload/patrocinado.jpg", alt="Avatar")
+        h3
+          a(href="#") Todos por Juli lorem ipsum dolor sit amet consecte tur elipsing sarasa
+        div.meta
+          a(href="#").avatar
+            img(src="media/upload/patrocinado-avatar.jpg", alt="Avatar")
+          strong Patrocinado por
+          a(href="#").usuario(title="ELManolo12")
+            span ELManolo12
+          span.tiempo.timeago(title="20 minutos") 20 minutos
+          a(href="#").ubicacion(title="Apuntes y...")
+            span Apuntes y...
+          a(href="#").comentarios
+            span(title="120 Comentarios") 120
+          //-span.tiempo.timeago(title="2014-04-10 14:09:18")
+    .loading.hide
+

@@ -1,0 +1,111 @@
+.top-usuarios {
+  margin-bottom: 20px;
+  overflow: hidden;
+  h2 {
+    margin-bottom: 0;
+    .mixIconBlt(@ico-tops);
+    padding-left: 4px;
+  }
+  ul {
+    li {
+      > a {
+        display: block;
+      }
+      border-bottom: solid 1px #d0d1d3;
+      background: #e6e6e6;
+      padding: 7px 9px 7px 6px;
+      clear: both;
+      overflow: hidden;
+      height: 30px;
+      span.num {
+        color: #b5b5b5;
+        font-size: 30px;
+        .text-shadow(0 1px #fff);
+        float: left;
+        margin-right: 8px;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-right: 10px;
+      }
+      h3 {
+        color: #545454;
+        font-size: 12px;
+        margin: 0;
+        font-weight: bold;
+        .text-shadow(0 1px #fff);
+        line-height: 1em;
+        width: 140px;
+        overflow: hidden;
+        height: 12px;
+      }
+      p {
+        color: #545454;
+        margin: 0;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      a.bt {
+        font-size: 10px;
+        font-weight: bold;
+        color: #FFF;
+        text-transform: uppercase;
+        background: #0cd769;
+        padding: 0 10px;
+        .border-radius(3px);
+        display: block;
+        float: right;
+        visibility: hidden;
+        &:hover {
+          background: @kuler6;
+        }
+      }
+      .wrap {
+        float: left;
+        width: 140px;
+        margin-right: 10px;
+      }
+      &:hover {
+        background: #f1f1f1;
+        a.bt {
+          visibility: visible;
+        }
+      }
+      &.destacado {
+        height: 70px;  
+        a.user {
+          padding: 7px 9px 7px 0;
+          height: 70px;  
+          display: block;        
+        }
+        h3 {
+          color: #4ea1f0;
+          font-size: 14px;
+          height: 15px;
+        }
+        p {
+          font-size: 12px;
+        }
+        a.bt {
+          visibility: visible;
+          float: none;
+          display: inline-block;
+          position: relative;
+          top: -47px;
+          padding: 0 10px;
+          height: 25px;
+          left: 70px;
+          line-height: 2.4em;
+        }
+      }
+      &.siguiendo a.bt {
+        background: #c8c8c8;
+        &:hover {
+          background: #ddd;
+        }
+      }
+    }
+  }
+}

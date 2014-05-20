@@ -1,0 +1,63 @@
+/* mixins */
+
+.clearfix () {
+  *zoom: 1;
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.size (@width: 400, @height: 200) {
+  width: @width * 1px;
+  height: @height * 1px;
+}
+
+.fontFace(@font, @fontString) {
+    src: e(%("url(%s%s%s)", @media, @font, ".eot"));
+    src: e(%("url(%s%s%s)", @media, @font, ".eot?#iefix")) format('embedded-opentype'),
+         e(%("url(%s%s%s)", @media, @font, ".woff")) format('woff'),
+         e(%("url(%s%s%s)", @media, @font, ".ttf")) format('truetype'),
+         e(%("url(%s%s%s)", @media, @font, ".svg#", @fontString)) format('svg');
+}
+
+.font-size(@sizeValue:1) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  font-size: ~"@{pxValue}px"; 
+  font-size: ~"@{remValue}rem";
+}
+
+.line-height(@sizeValue:1) {
+  @remValue: @sizeValue;
+  @pxValue: (@sizeValue * 10);
+  line-height: ~"@{pxValue}px"; 
+  line-height: ~"@{remValue}rem";
+}
+
+.hide-text () {
+  text-indent: -999em;
+  text-shadow: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.max-carac () {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.background(@img: "", @att: " ") {
+  background: e(%("url(%s%s)", @media, @img)) e(%("%s", @att));
+}
+
+.background-image(@img: "") {
+  background-image: e(%("url(%s%s)", @media, @img));
+}
+
+.sprite(@img: "", @w: 10, @h: 10, @x: 0, @y: 0)  {
+  background: e(%("url(%s%s)", @media, @img)) no-repeat (@x * 1px) (@y * 1px);
+	.size(@w,@h);
+}

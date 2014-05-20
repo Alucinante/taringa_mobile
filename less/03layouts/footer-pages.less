@@ -1,0 +1,46 @@
+footer.v6-footer-interna {
+  clear: both;
+  min-width: 1150px;
+  background: #fff;
+  height: 72px;
+  padding-top: 40px;
+  border-top: solid 1px #ebebeb;
+  p.hosted {
+    margin: 0;
+    width: 205px;
+    height: 53px;
+    float: left;
+    margin-top: -10px;
+    background: #fff data-uri('public/@{media}/img/footer-wiroos.gif') no-repeat 26px 18px;
+    border: none;
+    position: static;
+    a {
+      width: 205px;
+      height: 53px;
+      .hide-text();
+      display: block;
+    }
+  }
+  .anuncios-taringa {
+    ul {
+      list-style: none;
+      float: left;
+      li {
+        color: #545454;
+        font-size: 11px;
+        float: left;
+        padding-right: 5px;
+        @media @layout1100 {
+          font-size: 10px;
+        }
+        a {
+          color: #545454;
+          padding-right: 5px;
+          &:hover {
+            color: #2594ef;
+          }
+        }
+      }
+    }
+  }
+}

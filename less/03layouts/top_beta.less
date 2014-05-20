@@ -1,0 +1,40 @@
+body {
+  .transition(padding-top 500ms);
+}
+header {
+  .transition(top 500ms);  
+}
+.beta {
+  padding-top: 101px;
+  .beta-msg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+  }
+  header { 
+    top: 40px;
+  }
+}
+.beta-msg {
+  overflow: hidden;
+  height: 0;
+  font-size: 14px;
+  line-height: 40px;
+  color: @kuler1;
+  background: #fefef2;
+  z-index: 100;
+  .transition(height 500ms easy);
+
+  .v6-wrapper {
+    max-width: 1240px;
+    min-width: 1000px;
+    margin: 0 auto;
+  }
+  a {
+    color: @kuler1;
+    float: right;
+    font-weight: bold;
+  }
+}

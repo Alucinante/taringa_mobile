@@ -1,0 +1,240 @@
+.nav-user {
+  float: right;
+  padding-top: 9px;
+  height: 40px;
+  .login {
+    float: left;
+    position: relative;
+    .hide {
+      display: none;
+    }
+    .user-actions {
+      float: left;
+      margin: 0 5px;
+      background: @kuler5;
+      height: 40px;
+      .border-radius(2px);
+      line-height: 40px;
+      font-size: 12px;
+      color: @kuler12;
+      .user-action {
+        float: left;
+        padding-left: 3px;
+        position: relative;
+        .ico-notificaciones {
+          .mixIcon(@ico-notificaciones);
+          .text-shadow(0 1px 0 @kuler13);
+        }
+        .ico-mensajes {
+          .mixIcon(@ico-mensajes);
+          .text-shadow(0 1px 0 @kuler13);
+        }
+        .ico-favoritos {
+          .mixIcon(@ico-favoritos);
+          .text-shadow(0 1px 0 @kuler13);
+        }
+        .user-name {
+          display: inline-block;
+          white-space: nowrap;
+          max-width: 105px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 0;
+          text-align: right;
+          margin-right: 8px;
+        }
+        &:hover {
+          .tools {
+            //display: block;
+          }
+        }
+        > a {
+          padding: 0 3px;
+          color: @kuler12;
+
+          &[class^="ico"] {
+            position: relative;
+            &:before {
+              font-size: 1.2em;
+              position: relative;
+              top: 1px;
+              z-index: 10;
+              padding: 0 5px;
+            }
+
+            .count {
+              background: @kuler14;
+              display: block;
+              width: 12px;
+              text-align: center;
+              position: absolute;
+              right: -9px;
+              top: -11px;
+              font-size: 9px;
+              line-height: 8px;
+              height: 9px;
+              color: #fff;
+              padding: 2px 2px 0px;
+              .text-shadow(none);
+              .border-radius(2px);
+              &:before {
+                border: 4px solid transparent;
+                border-top-color: @kuler14;
+                content: '';
+                position: absolute;
+                top: 11px;
+                left: 2px;
+              }
+              &:after {
+                border: 3px solid @kuler5;
+                content: '';
+                position: absolute;
+                top: 11px;
+                left: 0px;
+              }
+            }
+          }
+          &.ico-mensajes {
+
+          }
+                
+          &:hover { 
+            color: #fff; 
+          }
+        }
+      }
+      img.user-picture { 
+        float: right;
+        .size(40,40);
+        .border-radius(2px);
+      }
+    }
+  }
+  .fb-login {
+    float: left;
+    a {
+      .mixButtonTop(@kuler5, #0a6fc3);
+
+      &.identificarse {
+        width: 30px;
+        margin-right: 1px;
+        text-align: center;
+        padding: 0;
+        font-weight: normal;
+        .mixIcon(@ico-facebook);
+      }
+      &.ingresar {
+        margin-right: 5px;
+      }  
+    }
+    
+  }
+  .registrarte {
+    .mixButtonTop(@kuler6, #16d76e);
+    margin-right: 10px;
+  }
+  form.buscar {
+    float: left;
+    background: @kuler10;
+    border: solid 1px @kuler10;
+    color: #fff;
+    font-size: 16px;
+    background: @kuler10;
+    margin-right: 11px;
+    position: relative;
+    height: 38px;
+    .border-radius(2px);
+    p {
+      margin: 0;
+      input {
+        border: 0;
+        background: none;
+        width: 140px;
+        margin: 0;
+        padding: 0 10px;
+        color: #FFF;
+        font-size: 16px;
+        position: relative;
+        top: -2px;
+        @media @layout1160 {
+          width: 110px;
+        }
+        @media @layout1100 {
+          width: 83px;
+        }
+      }
+      button {
+        .size(40,40);
+        border: solid 1px @kuler10;
+        background: none;
+        color: @kuler11;
+        .mixIcon(@ico-buscador);
+        .box-shadow(none);
+        .text-shadow(none);
+        border:none;
+        &:hover {
+          color: #fff;
+        }
+        &:before {
+          display: block;
+        }
+        &.ui-state-active {
+          .box-shadow(none) !important;
+        }
+        &.ui-state-hover {
+          border:none !important;
+          .border-radius(0) !important;
+        }
+      }
+    }
+    .box-results {
+      position: absolute;
+      top: 41px;
+      right: -1px;
+      width: 200px;
+      background: #fff;
+      border: solid 1px #dadada;
+      padding: 5px 0;
+      .border-radius(3px);
+      .box-shadow(5px 5px 10px rgba(0, 0, 0, 0.1));
+      &:before {
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid #FFF;
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: 8px;
+        @media @layout1160 {
+          left: 133px;
+        }
+        @media @layout1100 {
+          left: 153px;
+        }
+      }
+      ul {
+        margin: 0;
+      }
+      li {
+        list-style: none;
+        font-size: 12px;
+        height: 24px;
+        overflow: hidden;
+        color: #7e7e7e;
+        padding: 0 10px;
+        /*a {
+          color: #7e7e7e;
+          padding: 10px;
+          &:hover {
+            color: #2594ef;
+          }
+        }*/
+        &.active a, &.selected a {
+          color: #2594ef;
+        }
+      }
+    }
+  }
+}

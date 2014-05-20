@@ -1,0 +1,25 @@
+section.content-left
+  .list-ascenso.list-l
+    ul
+      - each item in content.items
+        li
+          a(href="#").avatar
+            img(src="media/upload/avatar1.jpg", alt="Avatar")
+          h3
+            a(href="#")= item.titulo
+          div.meta
+            a(href="#").usuario(title="ELManolo12")
+              span ELManolo12
+            span.tiempo.timeago(title="20 minutos") 20 minutos
+            a(href="#").ubicacion(title="Apuntes y...")
+              span Apuntes y...
+            a(href="#").comentarios
+              span(title="120 Comentarios") 120
+            //-span.tiempo.timeago(title=item.timeago)
+            
+          div.social-media
+            a(href="#").fb
+            a(href="#").tw
+            a(href="#").tg
+    .loading.hide
+

@@ -1,0 +1,14 @@
+extends _layouts/default
+block content
+  .v6-container.container-home
+    include _layouts/includes/sidebar
+    .v6-content
+      include _layouts/includes/subnav
+      include _layouts/includes/content-right
+      section.content-left
+        .list-destacados.list-l.loading
+  script.
+    $('.identificarse').addClass('loading');
+    $('.panels').html('<div class="loading"></div>');
+    $('.list-importante ul').remove();
+    $('.list-importante').append('<div class="loading"></div>');

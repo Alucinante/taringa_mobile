@@ -1,0 +1,18 @@
+{
+  "nav": [ 
+    {"link":"#", "name":"Anunciar"},
+    {"link":"#", "name":"Ayuda"},
+    {"link":"#", "name":"Protocolo"},
+    {"link":"#", "name":"desarrolladores"},
+    {"link":"#", "name":"Denuncias"},
+    {"link":"#", "name":"Report Abuse - DMCA"},
+    {"link":"#", "name":"Términos y condiciones"},
+    {"link":"#", "name":"Privacidad de datos"},
+    {"link":"#", "name":"Reportar bug"}
+  ],
+  "page": {
+    "title": "Taringa!",
+    "description": "inteligencia colectiva",
+    "keywords": "taringa, home"
+  }
+}

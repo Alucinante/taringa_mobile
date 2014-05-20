@@ -1,0 +1,234 @@
+/* taringa */
+
+@font-face {
+    font-family: 'taringa';
+    src: url('media/fonts/taringaicons-regular-webfont.eot');
+    src: url('media/fonts/taringaicons-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('media/fonts/taringaicons-regular-webfont.woff') format('woff'),
+         url('media/fonts/taringaicons-regular-webfont.ttf') format('truetype'),
+         url('media/fonts/taringaicons-regular-webfont.svg#taringa_icons_2regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url('media/fonts/fontello.eot');
+    src: url('media/fonts/fontello.eot?#iefix') format('embedded-opentype'),
+         url('media/fonts/fontello.woff') format('woff'),
+         url('media/fonts/fontello.ttf') format('truetype'),
+         url('media/fonts/fontello.svg#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.mixIconSrc(@icon: 'a', @size: 1em, @color: inherit) {
+		font-family: 'taringa';
+		content: @icon;
+		color: @color;
+		font-size: @size;
+		line-height: 1em;
+		font-weight: normal;
+		font-style: normal;
+		text-decoration: inherit;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+}
+
+.mixIcon(@icon: 'a', @size: 1em, @color: inherit) {
+	&:before {
+		.mixIconSrc(@icon, @size, @color);
+	}
+}
+
+.mixIconBlt(@icon: 'a', @size: 1em, @color: inherit) {
+	&:before {
+		.mixIconSrc(@icon, @size, @color);
+		margin-right: 0.4em;
+	}
+}
+
+.mixIconAfter(@icon: 'a', @size: 1em, @color: inherit) {
+	&:after {
+		.mixIconSrc(@icon, @size, @color);
+		margin-left:0.2em;
+	}
+}
+
+.mixIconSpinSrc {
+	.animation(spin 2s infinite linear);
+	display: inline-block;
+  text-decoration: none;
+  padding:0;
+  text-indent:0;
+}
+
+.mixIconSpin(@icon: 'N') {
+	&:before {
+    font-family: 'fontello' !important;
+    content: 'a' !important;
+    text-transform: none;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    .mixIconSpinSrc();
+	}
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+@-ms-keyframes spin {
+  0% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(359deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+.ico-family { .mixIconSrc(); }
+.loading { .mixIconSpin(); }
+.loading {
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+@ico-apuntes:						"B";
+@ico-animaciones:				"C";
+@ico-arte:							"D";
+@ico-autos:							"E";
+@ico-ciencia:						"F";
+@ico-deportes:					"G";
+@ico-ecologia:					"H";
+@ico-economia:					"I";
+@ico-femme:							"J";
+@ico-hazlo:							"K";
+@ico-humor:							"L";
+@ico-imagenes:					"M";
+@ico-info:							"N";
+@ico-juegosonline:			"O";
+@ico-linux:							"P";
+@ico-mac:								"Q";
+@ico-mascotas:					"R";
+@ico-noticias:					"S";
+@ico-offtopic:					"T";
+@ico-paranormal:				"U";
+@ico-patrocinado:				"V";
+@ico-recetas:						"W";
+@ico-reviews:						"X";
+@ico-salud:							"Y";
+@ico-solidaridad:				"Z";
+@ico-taringa:						"a";
+@ico-turismo:						"b";
+@ico-videos:						"c";
+@ico-juegos:						"d";
+@ico-links:							"e";
+@ico-musica:						"f";
+@ico-tv:								"g";
+@ico-celulares:					"h";
+@ico-ebooks:						"i";
+@ico-comic:							"j";
+@ico-anime:							"k";
+@ico-estadisticas:			"l";
+@ico-shouts:						"m";
+@ico-notificaciones:		"n";
+@ico-mensajes:					"o";
+@ico-favoritos:					"p";
+@ico-buscador:					"q";
+@ico-pulgararriba:			"r";
+@ico-pulgarabajo:				"s";
+@ico-tops:							"t";
+@ico-usuarios:					"u";
+@ico-tiempo:						"v";
+@ico-facebook:					"w";
+@ico-twitter:						"x";
+@ico-comments:          "y";
+@ico-candado:           "z";
+@ico-camara:            "1";
+@ico-video:             "2";
+@ico-candado:           "3";
+@ico-cerrar:   					"4";
+@ico-medalla:           "6";
+@ico-tesigue:           "7";
+@ico-puntos:            "8";
+@ico-commentsrespond:   "9";
+@ico-escribioperfil:    "!";
+@ico-cambiorango:       "$";
+@ico-subir:             '"';
+
+.icon-apuntes       {.mixIconBlt(@ico-apuntes);       }
+.icon-animaciones   {.mixIconBlt(@ico-animaciones);   }
+.icon-arte          {.mixIconBlt(@ico-arte);          }
+.icon-autos         {.mixIconBlt(@ico-autos);         }
+.icon-ciencia       {.mixIconBlt(@ico-ciencia);       }
+.icon-deportes      {.mixIconBlt(@ico-deportes);      }
+.icon-ecologia      {.mixIconBlt(@ico-ecologia);      }
+.icon-economia      {.mixIconBlt(@ico-economia);      }
+.icon-femme         {.mixIconBlt(@ico-femme);         }
+.icon-hazlo         {.mixIconBlt(@ico-hazlo);         }
+.icon-humor         {.mixIconBlt(@ico-humor);         }
+.icon-imagenes      {.mixIconBlt(@ico-imagenes);      }
+.icon-info          {.mixIconBlt(@ico-info);          }
+.icon-juegosonline  {.mixIconBlt(@ico-juegosonline);  }
+.icon-linux         {.mixIconBlt(@ico-linux);         }
+.icon-mac           {.mixIconBlt(@ico-mac);           }
+.icon-mascotas      {.mixIconBlt(@ico-mascotas);      }
+.icon-noticias      {.mixIconBlt(@ico-noticias);      }
+.icon-offtopic      {.mixIconBlt(@ico-offtopic);      }
+.icon-paranormal    {.mixIconBlt(@ico-paranormal);    }
+.icon-patrocinado   {.mixIconBlt(@ico-patrocinado);   }
+.icon-recetas       {.mixIconBlt(@ico-recetas);       }
+.icon-reviews       {.mixIconBlt(@ico-reviews);       }
+.icon-salud         {.mixIconBlt(@ico-salud);         }
+.icon-solidaridad   {.mixIconBlt(@ico-solidaridad);   }
+.icon-taringa       {.mixIconBlt(@ico-taringa);       }
+.icon-turismo       {.mixIconBlt(@ico-turismo);       }
+.icon-videos        {.mixIconBlt(@ico-videos);        }
+.icon-juegos        {.mixIconBlt(@ico-juegos);        }
+.icon-links         {.mixIconBlt(@ico-links);         }
+.icon-musica        {.mixIconBlt(@ico-musica);        }
+.icon-tv            {.mixIconBlt(@ico-tv);            }
+.icon-celulares     {.mixIconBlt(@ico-celulares);     }
+.icon-ebooks        {.mixIconBlt(@ico-ebooks);        }
+.icon-comic         {.mixIconBlt(@ico-comic);         }
+.icon-anime         {.mixIconBlt(@ico-anime);         }
+.icon-estadisticas  {.mixIconBlt(@ico-estadisticas);  }
+.icon-shouts        {.mixIconBlt(@ico-shouts);        }
+.icon-notificaciones{.mixIconBlt(@ico-notificaciones);}
+.icon-mensajes      {.mixIconBlt(@ico-mensajes);      }
+.icon-favoritos     {.mixIconBlt(@ico-favoritos);     }
+.icon-buscador      {.mixIconBlt(@ico-buscador);      }
+.icon-pulgararriba  {.mixIconBlt(@ico-pulgararriba);  }
+.icon-pulgarabajo   {.mixIconBlt(@ico-pulgarabajo);   }
+.icon-tops          {.mixIconBlt(@ico-tops);          }
+.icon-usuarios      {.mixIconBlt(@ico-usuarios);      }
+.icon-tiempo        {.mixIconBlt(@ico-tiempo);        }
+.icon-facebook      {.mixIconBlt(@ico-facebook);      }
+.icon-twitter       {.mixIconBlt(@ico-twitter);       }
+.icon-comments      {.mixIconBlt(@ico-comments);      }
+.icon-candado       {.mixIconBlt(@ico-candado);       }
+.icon-camara        {.mixIconBlt(@ico-camara);        }
+.icon-video         {.mixIconBlt(@ico-video);         }
+.icon-candado       {.mixIconBlt(@ico-candado);       }
+.icon-cerrar        {.mixIconBlt(@ico-cerrar);        }
+.icon-medalla       {.mixIconBlt(@ico-medalla);       }
+.icon-tesigue       {.mixIconBlt(@ico-tesigue);       }
+.icon-puntos        {.mixIconBlt(@ico-puntos);        }
+.icon-commentsrespond{.mixIconBlt(@ico-commentsrespond);}
+.icon-escribioperfil{.mixIconBlt(@ico-escribioperfil);}
+.icon-cambiorango   {.mixIconBlt(@ico-cambiorango);}
+.icon-subir         {.mixIconBlt(@ico-subir);}

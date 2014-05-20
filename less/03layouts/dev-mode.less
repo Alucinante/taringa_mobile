@@ -1,0 +1,36 @@
+.dev-label(@color, @title) {
+  outline: 1px solid @color;
+  position: relative;
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: @title;
+    font-size: 9px;
+    padding: 3px;
+    color: #fff;
+    background: @color;
+    line-height: 12px;
+  }
+}
+
+section {
+  .dev-label(#f00, 'section');
+}
+aside {
+  .dev-label(#0cc, 'aside');
+}
+.v6-container {
+  .dev-label(#0cc, 'container');
+  .clearfix;
+}
+header {
+  .dev-label(#3cc, 'header');
+}
+footer {
+  .dev-label(#f99, 'footer');
+}
+nav {
+  .dev-label(#ccf, 'nav');
+}

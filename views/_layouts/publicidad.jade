@@ -1,0 +1,13 @@
+include elements/nav
+!!! 5
+html.v6.v6-brand(lang="en")
+  - var title = config.page.title
+  - var description = config.page.description
+  - var keywords = config.page.keywords
+  //- var login = true
+  include includes/head
+  body.beta
+    #page
+      include includes/beta-msg
+      include includes/top
+      block content

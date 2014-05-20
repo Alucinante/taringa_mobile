@@ -1,0 +1,51 @@
+section.content-right
+  .list-importante.list-m
+    .actions.action-minmax
+      span.max +
+      span.active.min -
+    h2 Resaltados del Staff
+    ul
+      - each item in content.items
+        li
+          a(href="#")
+            img(src="media/upload/resultados.jpg", alt="resultados").thumb
+            h3= item.titulo
+            p= item.texto
+  .list-recomendados.list-m
+    h2 Recomendados para tí
+    ul
+      - each item in content.items
+        li
+          a(href="#")
+            img(src="media/upload/resultados.jpg", alt="resultados").thumb
+            h3= item.titulo
+            p= item.texto
+  .list-comentarios-recientes.list-s
+    h2 Comentarios recientes
+    ul
+      - each item in content.items
+        li
+          a(href="#")
+            img(src="media/upload/thumb2.jpg", alt="resultados").thumb
+            h3= item.titulo
+  .list-top-posts.list-m
+    .header
+      .actions.action-select
+        span.active Ayer
+        ol
+          li: a(href="#") Hoy
+          li: a(href="#") Ayer
+          li: a(href="#") Semana
+          li: a(href="#") Mes
+          li: a(href="#") Todos
+      h2 Top Posts
+    ul
+      - each item in content.items
+        li
+          a(href="#")
+            .count 27845
+            img(src="media/upload/resultados.jpg", alt="Top Posts").thumb
+            h3= item.titulo
+            p= item.texto
+    a.ver(href="#") Ver todos
+
